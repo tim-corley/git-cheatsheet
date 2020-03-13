@@ -3,25 +3,54 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link className="text-yellow-400 text-4xl" to="/">
+  <header className="border-b md:flex md:items-center md:justify-between p-4 pb-0 shadow-lg md:pb-4">
+    <div className="flex items-center justify-between mb-4 md:mb-0">
+      <h1 className="leading-none text-2xl text-grey-darkest">
+        <Link
+          className="no-underline text-grey-darkest hover:text-black"
+          to="/"
+        >
           {siteTitle}
         </Link>
       </h1>
+
+      <a className="text-black hover:text-orange md:hidden" href="#">
+        <i className="fa fa-2x fa-bars"></i>
+      </a>
     </div>
+
+    <form className="mb-4 w-full md:mb-0 md:w-1/4">
+      <label className="hidden" for="search-form">
+        Search
+      </label>
+      <input
+        className="bg-grey-lightest border-2 focus:border-orange p-2 rounded-lg shadow-inner w-full"
+        placeholder="Search"
+        type="text"
+      ></input>
+      <button className="hidden">Submit</button>
+    </form>
+
+    <nav>
+      <ul className="list-reset md:flex md:items-center">
+        <li className="md:ml-4">
+          <Link
+            className="border-b-2 border-t-2 border-transparent block no-underline hover:border-black py-2 text-grey-darkest hover:text-black md:py-2"
+            to="/"
+          >
+            Home
+          </Link>
+        </li>
+        <li className="md:ml-4">
+          <Link
+            className="border-b-2 border-t-2 border-transparent block no-underline hover:border-black py-2 text-grey-darkest hover:text-black md:py-2"
+            to="/about"
+          >
+            About
+          </Link>
+        </li>
+      </ul>
+    </nav>
   </header>
 )
 
