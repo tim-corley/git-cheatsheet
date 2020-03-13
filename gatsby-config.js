@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Git Cheatsheet`,
+    title: `Git Cheatsheets`,
     description: `References, notes, and examples for common git commands & workflows.`,
     author: `tcorley215@gmail.com`,
   },

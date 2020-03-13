@@ -1,17 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 export default function Template({ data }) {
   const section = data.markdownRemark
 
   return (
-    <div>
-      <Link to="/landing">Go Back</Link>
+    <Layout>
+      <SEO title="Home" />
+      <Link to="/">Go Back</Link>
       <hr />
       <h2>{section.frontmatter.title}</h2>
       <h4>Updated on: {section.frontmatter.date}</h4>
       <div dangerouslySetInnerHTML={{ __html: section.html }}></div>
-    </div>
+    </Layout>
   )
 }
 

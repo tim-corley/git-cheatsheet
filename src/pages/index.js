@@ -1,31 +1,48 @@
 import React from "react"
-
+import { Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import gitLogo from "../images/Git-Icon-Black-120px.png"
-import gitHubLogo from "../images/GitHub-Icon-Black-120px.png"
-
 import "./index.css"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Landing" />
-    <h2 className="text-gray-700">
-      <a href="https://git-scm.com/">Git</a> is a free and open source
-      distributed version control system.
-    </h2>
-    <h2 className="text-gray-700">
-      <a href="https://github.com/about">Github</a> is a hosting platform that
-      enables developer collaboration and code sharing.
-    </h2>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <img src={gitLogo} alt="Git Logo" />
-    </div>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <img src={gitHubLogo} alt="GitHub Logo" />
-    </div>
+    <SEO title="Home" />
+    {data.allMarkdownRemark.edges.map(section => (
+      <div
+        className="max-w-sm mb-10 p-4 rounded overflow-hidden shadow-lg"
+        key={section.node.id}
+      >
+        <div className="font-bold text-xl">
+          {section.node.frontmatter.title}
+        </div>
+        <div className="px-1 mb-3 text-sm text-gray-300">
+          {" "}
+          Updated: {section.node.frontmatter.date}
+        </div>
+        <Link to={section.node.frontmatter.path}>Details</Link>
+      </div>
+    ))}
   </Layout>
 )
+
+export const pageQuery = graphql`
+  query SheetsQuery {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___path] }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            path
+            date
+            title
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

@@ -13,10 +13,6 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-
-      <a className="text-black hover:text-orange md:hidden" href="#">
-        <i className="fa fa-2x fa-bars"></i>
-      </a>
     </div>
 
     <form className="mb-4 w-full md:mb-0 md:w-1/4">
@@ -32,7 +28,7 @@ const Header = ({ siteTitle }) => (
     </form>
 
     <nav>
-      <ul className="list-reset md:flex md:items-center">
+      <ul className="list-reset md:flex text-center">
         <li className="md:ml-4">
           <Link
             className="border-b-2 border-t-2 border-transparent block no-underline hover:border-black py-2 text-grey-darkest hover:text-black md:py-2"
