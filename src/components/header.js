@@ -7,7 +7,7 @@ const Header = ({ siteTitle }) => (
     <div className="flex items-center justify-between mb-4 md:mb-0">
       <h1 className="leading-none text-2xl text-grey-darkest">
         <Link
-          className="no-underline text-grey-darkest hover:text-black"
+          className="no-underline font-bold text-gray-200 hover:text-yellow-400"
           to="/"
         >
           {siteTitle}
@@ -20,7 +20,7 @@ const Header = ({ siteTitle }) => (
         Search
       </label>
       <input
-        className="bg-grey-lightest border-2 focus:border-orange p-2 rounded-lg shadow-inner w-full"
+        className="bg-grey-lightest border-2 focus:outline-none focus:placeholder-transparent p-2 rounded-lg shadow-inner w-full"
         placeholder="Search"
         type="text"
       ></input>
@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => (
       <ul className="list-reset md:flex text-center">
         <li className="md:ml-4">
           <Link
-            className="border-b-2 border-t-2 border-transparent block no-underline hover:border-black py-2 text-grey-darkest hover:text-black md:py-2"
+            className="border-b-2 border-t-2 border-transparent block no-underline hover:border-yellow-400 py-2 text-gray-300 hover:text-gray-500 md:py-2"
             to="/"
           >
             Home
@@ -39,7 +39,7 @@ const Header = ({ siteTitle }) => (
         </li>
         <li className="md:ml-4">
           <Link
-            className="border-b-2 border-t-2 border-transparent block no-underline hover:border-black py-2 text-grey-darkest hover:text-black md:py-2"
+            className="border-b-2 border-t-2 border-transparent block no-underline hover:border-yellow-400 py-2 text-gray-300 hover:text-gray-500 md:py-2"
             to="/about"
           >
             About

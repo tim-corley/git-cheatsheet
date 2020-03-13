@@ -25,12 +25,14 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main className="m-auto py-10 w-9/12 lg:w-2/3">{children}</main>
-      <footer className="m-2">
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      <section className="bg-gray-200">
+        <main className="m-auto lg:py-10 p-6 w-full lg:w-2/3">{children}</main>
+        <footer className="m-2">
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </footer>
+      </section>
     </>
   )
 }

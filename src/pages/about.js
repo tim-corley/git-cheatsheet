@@ -8,26 +8,32 @@ import gitHubLogo from "../images/GitHub-Icon-Black-120px.png"
 const AboutPage = () => (
   <Layout>
     <SEO title="About" />
-    <h2 className="text-gray-700">
-      <a href="https://git-scm.com/">Git</a> is a free and open source
-      distributed version control system.
-    </h2>
-    <h2 className="text-gray-700">
-      <a href="https://github.com/about">Github</a> is a hosting platform that
-      enables developer collaboration and code sharing.
-    </h2>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <img src={gitLogo} alt="Git Logo" />
+    <div className="max-w-sm mb-10 p-4 bg-white rounded overflow-hidden shadow-lg">
+      <div className="mb-2">
+        <a href="https://git-scm.com/">
+          <img src={gitLogo} alt="Git Logo" />
+        </a>
+      </div>
+      <h2 className="text-black">
+        <a href="https://git-scm.com/" className="hyperlink">
+          Git
+        </a>{" "}
+        is a free and open source distributed version control system.
+      </h2>
     </div>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <img src={gitHubLogo} alt="GitHub Logo" />
-    </div>
-    <div>
-      <h2>About The Site</h2>
-      <p>
-        Ex anim exercitation elit ullamco in mollit ex sunt labore in sint amet
-        cillum minim.
-      </p>
+    <div className="max-w-sm mb-10 p-4 bg-white rounded overflow-hidden shadow-lg">
+      <div className="mb-2">
+        <a href="https://github.com/about">
+          <img src={gitHubLogo} alt="GitHub Logo" />
+        </a>
+      </div>
+      <h2 className="text-black">
+        <a href="https://github.com/about" className="hyperlink">
+          Github
+        </a>{" "}
+        is a hosting platform that enables developer collaboration and code
+        sharing.
+      </h2>
     </div>
   </Layout>
 )

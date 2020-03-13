@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { FiArrowLeft } from "react-icons/fi"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -9,10 +10,11 @@ export default function Template({ data }) {
   return (
     <Layout>
       <SEO title="Home" />
-      <Link to="/">Go Back</Link>
+      <Link to="/" className="flex w-8 hyperlink text-2xl pb-3">
+        <FiArrowLeft />
+      </Link>
       <hr />
-      <h2>{section.frontmatter.title}</h2>
-      <h4>Updated on: {section.frontmatter.date}</h4>
+      <div className="font-bold text-xl m-4">{section.frontmatter.title}</div>
       <div dangerouslySetInnerHTML={{ __html: section.html }}></div>
     </Layout>
   )
