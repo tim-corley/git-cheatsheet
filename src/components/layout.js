@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <body className="bg-gray-200">
+      <section className="bg-gray-200">
         <main className="min-h-screen m-auto lg:py-10 p-6 w-full lg:w-2/3">
           {children}
         </main>
@@ -48,7 +48,7 @@ const Layout = ({ children }) => {
             </a>
           </div>
         </footer>
-      </body>
+      </section>
     </>
   )
 }

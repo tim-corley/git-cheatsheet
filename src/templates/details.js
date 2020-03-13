@@ -1,11 +1,18 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 import { FiArrowLeft } from "react-icons/fi"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 export default function Template({ data }) {
   const section = data.markdownRemark
+  let featuredImgFluid
+  if (section.frontmatter.featuredImage != null) {
+    featuredImgFluid = section.frontmatter.featuredImage.childImageSharp.fluid
+  } else {
+    featuredImgFluid = null
+  }
 
   return (
     <Layout>
@@ -15,6 +22,11 @@ export default function Template({ data }) {
       </Link>
       <hr />
       <div className="font-bold text-xl m-4">{section.frontmatter.title}</div>
+      {featuredImgFluid != null && (
+        <div className="w-full m-8">
+          <Img fluid={featuredImgFluid} />
+        </div>
+      )}
       <div dangerouslySetInnerHTML={{ __html: section.html }}></div>
     </Layout>
   )
@@ -28,6 +40,13 @@ export const sectionQuery = graphql`
         path
         title
         date
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 900) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
