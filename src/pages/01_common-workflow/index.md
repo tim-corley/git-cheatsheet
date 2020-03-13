@@ -6,7 +6,7 @@ title: "Common Workflow"
 
 ### (from master) Create new branch
 
-    $ git checkout -b [my_new_branch]
+    $ git checkout -b <branch-name>
 
 ### ----------
 
@@ -18,7 +18,7 @@ title: "Common Workflow"
 
 ### Update email address
 
-    $ git config user.email “my-correct@email.com”
+    $ git config user.email <address@email.com>
 
 ### ----------
 
@@ -54,13 +54,13 @@ title: "Common Workflow"
 
 ### Commit changes
 
-    $ git commit -m "[my commit message here]"
+    $ git commit -m "<descriptive commit message>"
 
 ### ----------
 
 ### Push changes (to remote repo)
 
-    $ git push origin [my_new_branch]
+    $ git push origin <branch-name>
 
 ### ----------
 
@@ -78,7 +78,7 @@ title: "Common Workflow"
 
 ### Merge branch (that was just pushed)
 
-    $ git merge [my_new_branch]
+    $ git merge <branch-name>
 
 ### ==========
 
@@ -86,6 +86,8 @@ title: "Common Workflow"
 
     $ git remote add origin git@personal:tim-corley/[repo-name].git
     $ git push origin master
+
+### ----------
 
 ### Change Repo
 

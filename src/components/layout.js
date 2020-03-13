@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { FaGithub } from "react-icons/fa"
 import Header from "./header"
 
 const Layout = ({ children }) => {
@@ -25,14 +25,30 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <section className="bg-gray-200">
-        <main className="m-auto lg:py-10 p-6 w-full lg:w-2/3">{children}</main>
-        <footer className="m-2">
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+      <body className="bg-gray-200">
+        <main className="min-h-screen m-auto lg:py-10 p-6 w-full lg:w-2/3">
+          {children}
+        </main>
+        <footer className="text-center text-gray-500 text-xs m-2 pb-4">
+          <a
+            className="flex hyperlink m-auto text-2xl pb-1 w-4"
+            href="https://www.github.com"
+          >
+            <FaGithub />
+          </a>
+          © {new Date().getFullYear()} TIM CORLEY
+          <div>
+            BUILT WITH
+            {` `}
+            <a
+              className="hyperlink text-gray-700 font-bold"
+              href="https://www.gatsbyjs.org"
+            >
+              GATSBY.JS
+            </a>
+          </div>
         </footer>
-      </section>
+      </body>
     </>
   )
 }
