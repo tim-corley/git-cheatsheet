@@ -36,7 +36,7 @@ title: "Basics"
 
 ### Create empty git repo (in specified directory)
 
-    $ git init <directory>
+    $ git init <project-name>
 
 ### ----------
 
@@ -52,6 +52,6 @@ title: "Basics"
 
 ### ----------
 
-### Display unstaged changes getween index & working directory
+### Display unstaged changes between index & working directory
 
-    $ git clone <repo>
+    $ git diff <file>

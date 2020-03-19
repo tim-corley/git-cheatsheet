@@ -1,8 +1,33 @@
 @tailwind base;
+
+@font-face {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  src: url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap")
+    format("ttf");
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  font-weight: 700;
+  src: url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap")
+    format("ttf");
+}
+
 @tailwind components;
 @tailwind utilities;
 
 /* Your custom CSS here */
+
+.handwritten {
+  font-family: Permanent Marker;
+  letter-spacing: 5px;
+}
+
+.card-title {
+  font-family: Inconsolata;
+  letter-spacing: 2px;
+}
 
 .hyperlink {
   color: #000;

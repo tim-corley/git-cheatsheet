@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
         <main className="min-h-screen m-auto lg:py-10 p-6 w-full lg:w-2/3">
           {children}
         </main>
-        <footer className="text-center text-gray-500 text-xs m-2 pb-4">
+        <footer className="font-mono text-center text-gray-500 text-xs m-2 pb-4">
           <a
             className="flex hyperlink m-auto text-2xl pb-1 w-4"
             href="https://www.github.com"

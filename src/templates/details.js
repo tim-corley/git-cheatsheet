@@ -21,7 +21,9 @@ export default function Template({ data }) {
         <FiArrowLeft />
       </Link>
       <hr />
-      <div className="font-bold text-xl m-4">{section.frontmatter.title}</div>
+      <div className="card-title font-bold text-2xl m-4">
+        {section.frontmatter.title}
+      </div>
       {featuredImgFluid != null && (
         <div className="w-full m-8">
           <Img fluid={featuredImgFluid} />

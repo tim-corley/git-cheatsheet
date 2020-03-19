@@ -14,10 +14,13 @@ const IndexPage = ({ data }) => (
         className="relative max-w-sm mb-10 p-4 bg-white rounded overflow-hidden shadow-lg"
         key={section.node.id}
       >
-        <Link to={section.node.frontmatter.path} className="font-bold text-xl">
+        <Link
+          to={section.node.frontmatter.path}
+          className="card-title font-bold text-2xl"
+        >
           {section.node.frontmatter.title}
         </Link>
-        <div className="px-1 mb-3 text-sm text-gray-300">
+        <div className="font-mono px-1 mb-3 text-xs text-gray-300">
           {" "}
           Updated: {section.node.frontmatter.date}
         </div>

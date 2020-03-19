@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/git-cheatsheet",
   siteMetadata: {
     title: `Git Cheatsheets`,
     description: `References, notes, and examples for common git commands & workflows.`,
