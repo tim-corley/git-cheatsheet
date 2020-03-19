@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => (
       </h1>
     </div>
 
-    <form className="mb-4 w-full md:mb-0 md:w-1/4">
+    <form className="hidden mb-4 w-full md:mb-0 md:w-1/4">
       <label className="hidden" htmlFor="search-form">
         Search
       </label>
